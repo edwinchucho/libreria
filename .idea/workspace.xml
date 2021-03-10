@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="" />
+    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -183,7 +185,7 @@
       <workItem from="1614957010417" duration="66000" />
       <workItem from="1614977204321" duration="3132000" />
       <workItem from="1615210429425" duration="2805000" />
-      <workItem from="1615403286541" duration="2442000" />
+      <workItem from="1615403286541" duration="3218000" />
     </task>
     <task id="LOCAL-00001" summary="libreria antes de user">
       <created>1615405420710</created>
@@ -192,11 +194,29 @@
       <option name="project" value="LOCAL" />
       <updated>1615405420710</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="libreria antes de user">
+      <created>1615406769034</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1615406769034</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
