@@ -49,8 +49,8 @@ class LibreryController extends AbstractController
      * @return JsonResponse
      */
     public function createBook(EntityManagerInterface $emi){
-        $book = new Book('hola4','hola4');
-        $categoria = new Categoria('holas');
+        $book = new Book('farid','12323');
+        $categoria = new Categoria('carros');
         $book->setCategoria($categoria);
         $response = new JsonResponse();
         if (empty($book->getTitle())){

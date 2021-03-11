@@ -20,15 +20,14 @@ class BookType extends AbstractType
         $builder
             ->add('title',TextType::class)
             ->add('image',IntegerType::class)
-            ->add('enviar',SubmitType::class)
             ->add('categoria',EntityType::class,[
                 'class'=>Categoria::class,
-                'mapped'=>false,
+                'mapped'=>true,
                 'choice_label'=> function(Categoria $categoria){
                     return $categoria->getName();
                 }
             ])
-
+            ->add('enviar',SubmitType::class)
         ;
     }
 
