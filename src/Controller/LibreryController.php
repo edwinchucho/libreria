@@ -17,6 +17,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class LibreryController extends AbstractController
 {
+    /**
+     * @Route("/", name="app_homepage")
+     */
+    public function homepage()
+    {
+        return $this->render('article/homepage.html.twig', [
+        ]);
+    }
 
     /**
      * @Route("/books",name="book_get")
@@ -50,7 +58,7 @@ class LibreryController extends AbstractController
      */
     public function createBook(EntityManagerInterface $emi){
         $book = new Book('farid','12323');
-        $categoria = new Categoria('carros');
+        $categoria = new Categoria('motos');
         $book->setCategoria($categoria);
         $response = new JsonResponse();
         if (empty($book->getTitle())){

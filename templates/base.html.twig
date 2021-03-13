@@ -8,6 +8,9 @@
             <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
             <link rel="stylesheet" href="{{ asset('css/font-awesome.css') }}">
             <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+            <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" crossorigin="anonymous"></script>
+
         {% endblock %}
 
         {% block javascripts %}
@@ -15,6 +18,41 @@
         {% endblock %}
     </head>
     <body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+        <a class="navbar-brand" href="{{ path('formularioP') }}">
+            <i style="color: #444; font-size: 2rem;" class="fa fa-calendar"></i>
+            <p class="pl-2 d-inline font-weight-bold mr-sm-3" style="color: #444;">Cauldron Overflow</p>
+        </a>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+
+        <ul class="nav justify-content-end">
+            <li class="nav-item">
+                <form class="form-inline my-2 my-lg-2">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-success my-1 my-sm-1" type="submit">Search</button>
+                </form>
+            </li>
+            <li class="nav-item my-2 my-lg-2 " >
+                <a class="navbar-brand" href="{{ path('app_login') }}" >
+                    <p class="pl-2 d-inline font-weight-bold mr-sm-2" style="color: #444;">Login</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
+
+
         {% block body %}{% endblock %}
     </body>
 </html>
