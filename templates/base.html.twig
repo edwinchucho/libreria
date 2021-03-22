@@ -13,46 +13,68 @@
 
         {% endblock %}
 
-        {% block javascripts %}
-            {#{{ encore_entry_script_tags('app') }}#}
-        {% endblock %}
     </head>
     <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light ">
-        <a class="navbar-brand" href="{{ path('formularioP') }}">
-            <i style="color: #444; font-size: 2rem;" class="fa fa-calendar"></i>
-            <p class="pl-2 d-inline font-weight-bold mr-sm-3" style="color: #444;">Cauldron Overflow</p>
-        </a>
-        <div class="collapse navbar-collapse" id="navbarNavDropdown">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light ">
+            <a class="navbar-brand" href="{{ path('app_homepage') }}">
+                <i style="color: #444; font-size: 2rem;" class="fa fa-calendar"></i>
+                <p class="pl-2 d-inline font-weight-bold mr-sm-3" style="color: #444;">Cauldron Overflow</p>
+            </a>
+            <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Pricing</a>
+                    </li>
+                </ul>
+            </div>
+
+            <ul class="nav justify-content-end">
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Features</a>
+                    <form class="form-inline my-2 my-lg-2">
+                        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-success my-1 my-sm-1" type="submit">Search</button>
+                    </form>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Pricing</a>
-                </li>
+
+                {% if is_granted('ROLE_USER') %}
+                    <div class="dropdown ">
+                        <li class="nav-item dropdown" style="margin-right:80px;">
+                            <a class="nav-link dropdown-toggle"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img class="nav-profile-img rounded-circle" src="{{ asset('images/astronaut-profile.png') }}">
+                            </a>
+                            <div class="dropdown-menu dropdown-menu-right">
+                                {% if is_granted('ROLE_ADMIN') %}
+                                    <a class="dropdown-item" type="button" href="{{ path('app_admin') }}">UserRegister</a>
+                                    <a class="dropdown-item" href="{{ path('app_formularioP') }}">Formulario</a>
+                                {% endif %}
+                                <a class="dropdown-item" type="button" href="{{ path('app_logout') }}">Logout</a>
+                            </div>
+                        </li>
+                    </div>
+                {% else %}
+                    <li class="nav-item">
+                        <a style="color: black;" class="nav-link" href="{{ path('app_login') }}">Login</a>
+                        <a style="color: black;" class="nav-link" href="{{ path('app_register') }}">Register</a>
+                    </li>
+                {% endif %}
+
             </ul>
-        </div>
+        </nav>
+            {% block body %}{% endblock %}
 
-        <ul class="nav justify-content-end">
-            <li class="nav-item">
-                <form class="form-inline my-2 my-lg-2">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                    <button class="btn btn-success my-1 my-sm-1" type="submit">Search</button>
-                </form>
-            </li>
-            <li class="nav-item my-2 my-lg-2 " >
-                <a class="navbar-brand" href="{{ path('app_login') }}" >
-                    <p class="pl-2 d-inline font-weight-bold mr-sm-2" style="color: #444;">Login</p>
-                </a>
-            </li>
-        </ul>
-    </nav>
-
-
-        {% block body %}{% endblock %}
+            {% block javascripts %}
+                <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+                <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+                <script>
+                    $('.dropdown-toggle').dropdown();
+                </script>
+            {% endblock %}
     </body>
 </html>

@@ -4,6 +4,8 @@ namespace App\Entity;
 
 use App\Repository\UserRepository;
 use Doctrine\ORM\Mapping as ORM;
+use Gedmo\Mapping\Annotation as Gedmo;
+use Gedmo\Timestampable\Traits\TimestampableEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
@@ -11,6 +13,7 @@ use Symfony\Component\Security\Core\User\UserInterface;
  */
 class User implements UserInterface
 {
+
     /**
      * @ORM\Id
      * @ORM\GeneratedValue
@@ -37,6 +40,12 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255)
      */
     private $password;
+
+    /**
+     * @Gedmo\Timestampable (on="create")
+     * @ORM\Column(type="datetime", nullable=true)
+     */
+    private $creado;
 
     public function getId(): ?int
     {
@@ -131,5 +140,16 @@ class User implements UserInterface
 
         return $this;
     }
+
+    public function agreeToTerms()
+    {
+    }
+
+    public function getCreado(): ?\DateTimeInterface
+    {
+        return $this->creado;
+    }
+
+
 
 }

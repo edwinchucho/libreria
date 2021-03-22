@@ -6,16 +6,22 @@ namespace App\Controller;
 
 use App\Entity\Book;
 use App\Form\BookType;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
-class Formulario extends AbstractController
+
+/**
+ *@IsGranted("ROLE_ADMIN")
+*/
+ class Formulario extends AbstractController
 {
     /**
-     * @Route("/prueba",name="formularioP")
+     * @Route("/admin/formulario",name="app_formularioP")
      */
     public function prueba (Request $request){
+
         $book = new Book();
         $form = $this->createForm(BookType::class,$book);
 

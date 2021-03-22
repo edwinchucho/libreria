@@ -4,6 +4,7 @@ namespace App\Repository;
 
 use App\Entity\User;
 use Doctrine\Bundle\DoctrineBundle\Repository\ServiceEntityRepository;
+use Doctrine\ORM\QueryBuilder;
 use Doctrine\Persistence\ManagerRegistry;
 
 /**
@@ -17,6 +18,19 @@ class UserRepository extends ServiceEntityRepository
     public function __construct(ManagerRegistry $registry)
     {
         parent::__construct($registry, User::class);
+    }
+
+    /**
+     * @param string|null $term
+     */
+    public function getWithSearchQueryBuilder(?string $term)
+    {
+        return $this->createQueryBuilder('u')
+            ->andWhere('u.email LIKE :term OR u.firstName LIKE :term OR u.id LIKE :term ')
+            ->setParameter('term', '%' . $term . '%')
+            ->orderBy('u.id', 'DESC')
+            ->getQuery()
+            ;
     }
 
     // /**
