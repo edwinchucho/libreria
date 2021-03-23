@@ -8,8 +8,10 @@ use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
 
@@ -25,7 +27,7 @@ class AdminController extends AbstractController
     {
         $q = $request->query->get('q');
 
-        $query = $repository->getWithSearchQueryBuilder($q);
+        $query = $repository->getSearchQuery($q);
 
         $users = $paginator->paginate(
             $query,
@@ -37,14 +39,14 @@ class AdminController extends AbstractController
     }
 
     /**
-     * @Route("/borrar/{idEvento}", name="borrar_datos")
+     * @Route("/borrar/{id}", name="borrar_datos")
+     * @Method("DELETE")
      */
-    public function borrar($idEvento,EntityManagerInterface $em,UserRepository $repository)
+    public function borrar($id,EntityManagerInterface $em,UserRepository $repository)
     {
-        $query = $repository->find($idEvento);
+        $query = $repository->find($id);
         $em->remove($query);
         $em->flush();
-
-        return $this->redirectToRoute('app_admin');
+        return new Response(null, 204);
     }
 }

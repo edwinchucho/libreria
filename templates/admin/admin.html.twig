@@ -34,7 +34,7 @@
             </form>
 
 
-            <table class="table table-striped">
+            <table class="table table-striped js-table">
                 <thead>
                 <tr>
                     <th>id</th>
@@ -64,9 +64,10 @@
                             {{ user.creado|ago }}
                         </td>
                         <td>
-                            <a href="{{ path('borrar_datos',{'idEvento': user.id}) }}">
+                            <a  href="#" class="js-delete" data-url="{{ path('borrar_datos', {id: user.id}) }}">
                                 <i class="fa fa-th-large"></i>
-                                <span class="nav-label">borrar</span> </a>
+                                <span class="nav-label">borrar</span>
+                            </a>
                         </td>
                     </tr>
                 {% else %}
@@ -82,4 +83,8 @@
             {{ knp_pagination_render(users) }}
         </div>
     </div>
+{% endblock %}
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/delete_user.js') }}"></script>
 {% endblock %}
