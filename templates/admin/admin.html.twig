@@ -6,14 +6,18 @@
     {{ parent() }}
     show-article-container-border-green
 {% endblock %}
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/login.css')}}">
+{% endblock %}
 
 {% block content_body %}
     <div class="row">
         <div class="col-sm-12">
-            <h1>Manage user ({{ pagination.getTotalItemCount }})</h1>
+            <h1>Manage user ({{ users.getTotalItemCount }})</h1>
 
             <form>
-                <div class="input-group mb-3">
+                <div class="input-group form-signin">
                     <input type="text"
                            name="q"
                            class="form-control"
@@ -29,6 +33,7 @@
                 </div>
             </form>
 
+
             <table class="table table-striped">
                 <thead>
                 <tr>
@@ -37,25 +42,31 @@
                     <th>firstName</th>
                     <th>roles</th>
                     <th>creado</th>
+                    <th>Borrar</th>
                 </tr>
                 </thead>
                 <tbody>
-                {% for campo in pagination %}
+                {% for user in users %}
                     <tr>
                         <td>
-                            {{ campo.id }}
+                            {{ user.id }}
                         </td>
                         <td>
-                            {{ campo.email }}
+                            {{ user.email }}
                         </td>
                         <td>
-                            {{ campo.firstName }}
+                            {{ user.firstName }}
                         </td>
                         <td>
-                            {{ campo.roles|join(',') }}
+                            {{ user.roles|join(',') }}
                         </td>
                         <td>
-                            {{ campo.roles|join(',') }}
+                            {{ user.creado|ago }}
+                        </td>
+                        <td>
+                            <a href="{{ path('borrar_datos',{'idEvento': user.id}) }}">
+                                <i class="fa fa-th-large"></i>
+                                <span class="nav-label">borrar</span> </a>
                         </td>
                     </tr>
                 {% else %}
@@ -68,7 +79,7 @@
                 </tbody>
             </table>
 
-            {{ knp_pagination_render(pagination) }}
+            {{ knp_pagination_render(users) }}
         </div>
     </div>
 {% endblock %}

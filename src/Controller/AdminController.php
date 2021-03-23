@@ -3,7 +3,9 @@
 namespace App\Controller;
 
 
+use App\Entity\User;
 use App\Repository\UserRepository;
+use Doctrine\ORM\EntityManagerInterface;
 use Knp\Component\Pager\PaginatorInterface;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\IsGranted;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
@@ -25,14 +27,24 @@ class AdminController extends AbstractController
 
         $query = $repository->getWithSearchQueryBuilder($q);
 
-        $pagination = $paginator->paginate(
+        $users = $paginator->paginate(
             $query,
             $request->query->getInt('page', 1), 5
         );
-
-
         return $this->render('admin/admin.html.twig', [
-            'pagination' => $pagination,
+            'users' => $users,
         ]);
+    }
+
+    /**
+     * @Route("/borrar/{idEvento}", name="borrar_datos")
+     */
+    public function borrar($idEvento,EntityManagerInterface $em,UserRepository $repository)
+    {
+        $query = $repository->find($idEvento);
+        $em->remove($query);
+        $em->flush();
+
+        return $this->redirectToRoute('app_admin');
     }
 }

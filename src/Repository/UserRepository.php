@@ -26,7 +26,7 @@ class UserRepository extends ServiceEntityRepository
     public function getWithSearchQueryBuilder(?string $term)
     {
         return $this->createQueryBuilder('u')
-            ->andWhere('u.email LIKE :term OR u.firstName LIKE :term OR u.id LIKE :term ')
+            ->andWhere('u.email LIKE :term OR u.firstName LIKE :term OR u.id LIKE :term OR u.roles LIKE :term ')
             ->setParameter('term', '%' . $term . '%')
             ->orderBy('u.id', 'DESC')
             ->getQuery()

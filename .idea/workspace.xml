@@ -2,33 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/stof_doctrine_extensions.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/ArticleFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/DataTransformer/EmailToUserTransformer.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/Model/UserRegistrationFormModel.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserRegistrationFormType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Form/UserSelectTextType.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/UniqueUser.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Validator/UniqueUserValidator.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/content_base.html.twig" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/templates/security/register.html.twig" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Controller/Admin/UserCrudController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libreria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libreria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/packages/security.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/packages/security.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/Formulario.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/Formulario.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/SecurityController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/SecurityController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Entity/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/User.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Repository/UserRepository.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Repository/UserRepository.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Security/LoginFormAuthenticator.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/security/login.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/security/login.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/admin.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/admin.html.twig" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/formulario.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/formulario.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,6 +170,10 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
       <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
+      <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
+      <path value="$PROJECT_DIR$/vendor/symfony/uid" />
+      <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
+      <path value="$PROJECT_DIR$/vendor/knplabs/knp-time-bundle" />
     </include_path>
   </component>
   <component name="ProjectId" id="1ou0Q2A0gscEPAYU1Gd6imnmuqC" />
@@ -200,7 +190,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../symfony4/symfony4Security/public/js/article_show.js" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -260,7 +250,13 @@
       <workItem from="1615756498804" duration="21187000" />
       <workItem from="1615813108236" duration="6098000" />
       <workItem from="1616202466081" duration="1568000" />
-      <workItem from="1616360415010" duration="21066000" />
+      <workItem from="1616360415010" duration="23177000" />
+      <workItem from="1616418422807" duration="4007000" />
+      <workItem from="1616428731158" duration="7852000" />
+      <workItem from="1616438790391" duration="896000" />
+      <workItem from="1616440444104" duration="12017000" />
+      <workItem from="1616506194426" duration="482000" />
+      <workItem from="1616506947582" duration="2697000" />
     </task>
     <task id="LOCAL-00001" summary="libreria antes de user">
       <created>1615405420710</created>
@@ -311,7 +307,14 @@
       <option name="project" value="LOCAL" />
       <updated>1615606191113</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="sin usar easyadmin">
+      <created>1616382526056</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1616382526058</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -346,7 +349,8 @@
     <MESSAGE value="con autenticador" />
     <MESSAGE value="con homepage" />
     <MESSAGE value="user y password sin roles de acceso" />
-    <option name="LAST_COMMIT_MESSAGE" value="user y password sin roles de acceso" />
+    <MESSAGE value="sin usar easyadmin" />
+    <option name="LAST_COMMIT_MESSAGE" value="sin usar easyadmin" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
