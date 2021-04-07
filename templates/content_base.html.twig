@@ -1,57 +1,13 @@
 {% extends 'base.html.twig' %}
-<title>{% block title %}admin{% endblock %}</title>
-{% block stylesheets %}
-    {{ parent() }}
-{% endblock %}
-{% block sidebar %}
-<aside
-        class="app-navbar">
-    <!-- begin sidebar-nav -->
-    <div class="sidebar-nav scrollbar scroll_light">
 
-        <ul class="metismenu" id="sidebarNav">
-            <li class="nav-static-title">Personal</li>
-            <li>
-                <a href="#">
-                    <i class="dashicons dashicons-category"></i>
-                    <span class="nav-title">categoria</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="">
-                    <i class="dashicons dashicons-products"></i>
-                    <span class="nav-title">Productos</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="#">
-                    <i class="dashicons dashicons-products"></i>
-                    <span class="nav-title">comentarios</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="{{ path('app_admin') }}">
-                    <i class="dashicons dashicons-products"></i>
-                    <span class="nav-title">Users</span>
-                </a>
-
-            </li>
-            <li>
-                <a href="/admin/setting">
-                    <i class="dashicons dashicons-admin-settings"></i>
-                    <span class="nav-title">Setting</span>
-                </a>
-
-            </li>
-        </ul>
+{% block body %}
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="{% block content_class %}show-article-container p-3 mt-4{% endblock %}">
+                    {% block content_body %}{% endblock %}
+                </div>
+            </div>
+        </div>
     </div>
-    <!-- end sidebar-nav -->
-</aside>
-{% endblock %}
-
-{% block javascripts %}
-    {{ parent() }}
 {% endblock %}

@@ -1,17 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/config/packages/fos_ckeditor.yaml" afterDir="false" />
+    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="admin con product">
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/0ed95b3fba58bb736923a30629fb2bc7.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/10a53b939a0aaceffd520b89b53d9ead.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/2b9801f0cc51b9de533a3e4bde0c2c7a-606cf5f933ea6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/4b074024f33e1cf5cc1295eac2850f2e-606cf5cc3c943.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/c59888d1239081d28b1c6960f32b6d02.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/ce6e00382c457ea1c543126f6e705359.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/f5c12c81d29b702afb7db9e69930eaeb.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/uploads/images/fe0eac9d06f923cd651658d4664ba607-606bcd50e7ebf.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Services/UploaderHelper.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Twig/AppExtension.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libreria.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libreria.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config/bundles.php" beforeDir="false" afterPath="$PROJECT_DIR$/config/bundles.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/config/services.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/config/services.yaml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Controller/AdminController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Controller/AdminController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Entity/Categoria.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/Entity/Categoria.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/symfony.lock" beforeDir="false" afterPath="$PROJECT_DIR$/symfony.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/base.html.twig" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/content_base.html.twig" beforeDir="false" afterPath="$PROJECT_DIR$/templates/content_base.html.twig" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -37,6 +46,7 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -174,7 +184,6 @@
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-components" />
       <path value="$PROJECT_DIR$/vendor/knplabs/knp-paginator-bundle" />
       <path value="$PROJECT_DIR$/vendor/stof/doctrine-extensions-bundle" />
-      <path value="$PROJECT_DIR$/vendor/fzaninotto/faker" />
       <path value="$PROJECT_DIR$/vendor/easycorp/easyadmin-bundle" />
       <path value="$PROJECT_DIR$/vendor/symfony/uid" />
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-uuid" />
@@ -264,6 +273,10 @@
       <workItem from="1616506194426" duration="482000" />
       <workItem from="1616506947582" duration="6705000" />
       <workItem from="1616520906909" duration="4717000" />
+      <workItem from="1617277292114" duration="1354000" />
+      <workItem from="1617658917638" duration="13826000" />
+      <workItem from="1617726696346" duration="786000" />
+      <workItem from="1617735141685" duration="18099000" />
     </task>
     <task id="LOCAL-00001" summary="libreria antes de user">
       <created>1615405420710</created>
@@ -328,13 +341,21 @@
       <option name="project" value="LOCAL" />
       <updated>1616514798014</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="admin con product">
+      <created>1617247613979</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1617247613980</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.History.Properties">
+    <option name="SHOW_OTHER_BRANCHES" value="true" />
     <option name="COLUMN_ID_ORDER">
       <list>
         <option value="Default.Root" />
@@ -365,7 +386,8 @@
     <MESSAGE value="user y password sin roles de acceso" />
     <MESSAGE value="sin usar easyadmin" />
     <MESSAGE value="borrado de user por slug" />
-    <option name="LAST_COMMIT_MESSAGE" value="borrado de user por slug" />
+    <MESSAGE value="admin con product" />
+    <option name="LAST_COMMIT_MESSAGE" value="admin con product" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

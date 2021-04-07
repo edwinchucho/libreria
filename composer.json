@@ -14,7 +14,6 @@
         "doctrine/orm": "^2.8",
         "easycorp/easyadmin-bundle": "^3.2",
         "friendsofsymfony/ckeditor-bundle": "^2.3",
-        "fzaninotto/faker": "^1.9",
         "gedmo/doctrine-extensions": "^3.0",
         "knplabs/knp-paginator-bundle": "^5.4",
         "knplabs/knp-time-bundle": "^1.16",

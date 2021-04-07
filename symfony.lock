@@ -123,9 +123,6 @@
             "./config/packages/fos_ckeditor.yaml"
         ]
     },
-    "fzaninotto/faker": {
-        "version": "v1.9.2"
-    },
     "gedmo/doctrine-extensions": {
         "version": "v3.0.3"
     },
