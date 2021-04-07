@@ -1,0 +1,94 @@
+{% extends 'content_base.html.twig' %}
+
+{% block title %}Manage Product{% endblock %}
+
+{% block content_class %}
+	{{ parent() }}
+	show-article-container-border-green
+{% endblock %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" href="{{ asset('css/login.css')}}">
+{% endblock %}
+
+{% block content_body %}
+	<div class="row">
+		<div class="col-sm-12">
+			<h1>Manage product ({{ products.getTotalItemCount }})</h1>
+
+			<form>
+				<div class="input-group form-signin">
+					<input type="text"
+						   name="p"
+						   class="form-control"
+						   value="{{ app.request.query.get('p') }}"
+						   placeholder="Search..."
+					>
+					<div class="input-group-append">
+						<button type="submit"
+								class="btn btn-outline-secondary">
+							<span class="fa fa-search"></span>
+						</button>
+					</div>
+				</div>
+			</form>
+			<a class="btn btn-primary" href="{{ path('admin_product_new') }}" role="button">NEW</a>
+
+			<table class="table table-striped js-table">
+				<thead>
+				<tr>
+					<th>id</th>
+					<th>title</th>
+					<th>description</th>
+					<th>image</th>
+					<th>price</th>
+					<th>amount</th>
+					<th>Borrar</th>
+				</tr>
+				</thead>
+				<tbody>
+				{% for product in products %}
+					<tr>
+						<td>
+							{{ product.id }}
+						</td>
+						<td>
+							{{ product.title }}
+						</td>
+						<td>
+							{{ product.description }}
+						</td>
+						<td>
+							<img src="{{ asset(product.ImagePath) }}" height="100" width="100"/>
+						</td>
+						<td>
+							{{ product.price }}
+						</td>
+						<td>
+							{{ product.amount }}
+						</td>
+						<td>
+							<a  href="#" class="js-delete" data-url="{{ path('admin_product_delete', {id: product.id}) }}">
+								<i class="fa fa-th-large"></i>
+								<span class="nav-label">borrar</span>
+							</a>
+						</td>
+					</tr>
+				{% else %}
+					<tr>
+						<td colspan="4" class="text-center">
+							No user found
+						</td>
+					</tr>
+				{% endfor %}
+				</tbody>
+			</table>
+
+			{{ knp_pagination_render(products) }}
+		</div>
+	</div>
+{% endblock %}
+{% block javascripts %}
+	{{ parent() }}
+	<script src="{{ asset('js/delete_user.js') }}"></script>
+{% endblock %}

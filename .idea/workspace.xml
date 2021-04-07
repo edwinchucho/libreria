@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="admin con product">
+    <list default="true" id="377f4910-5f2a-4691-bedc-07f2f13b6942" name="Default Changelist" comment="">
       <change afterPath="$PROJECT_DIR$/public/uploads/images/0ed95b3fba58bb736923a30629fb2bc7.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/images/10a53b939a0aaceffd520b89b53d9ead.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/public/uploads/images/2b9801f0cc51b9de533a3e4bde0c2c7a-606cf5f933ea6.jpg" afterDir="false" />
@@ -276,7 +276,7 @@
       <workItem from="1617277292114" duration="1354000" />
       <workItem from="1617658917638" duration="13826000" />
       <workItem from="1617726696346" duration="786000" />
-      <workItem from="1617735141685" duration="18099000" />
+      <workItem from="1617735141685" duration="18226000" />
     </task>
     <task id="LOCAL-00001" summary="libreria antes de user">
       <created>1615405420710</created>
@@ -348,7 +348,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617247613980</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="admin con product">
+      <created>1617754911181</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1617754911182</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
